@@ -24,8 +24,14 @@ debug_scoo = create_dataref("AT/system/scoop/debug/sc", "number")
 dr_airspeed_kts_pilot = find_dataref("sim/flightmodel/position/indicated_airspeed") 
 dr_water_rudder = find_dataref("sim/cockpit2/controls/water_rudder_handle_ratio")
 dr_pitot = find_dataref("sim/cockpit/switches/pitot_heat_on")
+dr_nav_lights_on = find_dataref("sim/cockpit/electrical/nav_lights_on")
+
+dr_mix1 = find_dataref("sim/cockpit2/engine/actuators/mixture_ratio[1]")
 
 dr_draw_fire = find_dataref("sim/graphics/settings/draw_forestfires")
+
+
+simCMD_jettison_payload = find_command("sim/flight_controls/jettison_payload")
 
 at_scoop_deploy = create_dataref("AT/scoop", "number")
 at_scoop_deploy = 0
@@ -65,6 +71,9 @@ function do_on_exit()
 
 end
 
+prev_navlight = 0
+
+prev_mix = 0
 function checkIfScooping()
 	debug_speed = interpolate(0, 50, 3000, 65, dr_watermass)
 	if (dr_onground > 0) then
@@ -91,6 +100,21 @@ function checkIfScooping()
 			dr_watermass = 3000
 		end
 		--dr_scoop_deploy_ratio = 1
+	end
+	
+	if (prev_navlight ~= dr_nav_lights_on) then
+		simCMD_jettison_payload:once()
+		prev_navlight = dr_nav_lights_on
+	end
+	
+	if (dr_mix1 < 0.4) then
+		if (prev_mix == 0) then
+			prev_mix = 1
+			simCMD_jettison_payload:once()
+		end
+	else
+		prev_mix = 0
+		
 	end
 end
 
