@@ -30,6 +30,7 @@ dr_mix1 = find_dataref("sim/cockpit2/engine/actuators/mixture_ratio[1]")
 
 dr_draw_fire = find_dataref("sim/graphics/settings/draw_forestfires")
 
+dr_custom0 = find_dataref("sim/cockpit2/controls/speedbrake_ratio")
 
 simCMD_jettison_payload = find_command("sim/flight_controls/jettison_payload")
 
@@ -47,6 +48,24 @@ end
 sim_heartbeat = 1030
 
 c12 = create_command("AT/deploy_scoop", "Toggle Scoop deploy", toggleScoop)
+
+
+at_overflow = create_dataref("AT/overflow", "number")
+at_overflow = 0
+
+function toggleOverflow(phase, duration)
+	sim_heartbeat = 220
+	if (phase == 0) then
+		if at_overflow == 0 then
+			at_overflow = 1
+		else
+			at_overflow = 0
+		end
+		sim_heartbeat = 229
+	end
+	sim_heartbeat = 1031
+end
+c_overflow = create_command("AT/overflow_toggle", "Toggle overflow", toggleOverflow)
 
 -- Lokala variabler
 g_markkontakt = 1
@@ -75,7 +94,7 @@ prev_navlight = 0
 
 prev_mix = 0
 function checkIfScooping()
-	debug_speed = interpolate(0, 50, 3000, 65, dr_watermass)
+	debug_speed = interpolate(0, 40, 3000, 50, dr_watermass)
 	if (dr_onground > 0) then
 		debug_contact = 1
 		if (dr_firebutton > 0 or dr_pitot > 0 or at_scoop_deploy > 0) then
@@ -91,17 +110,20 @@ function checkIfScooping()
 		debug_scooping = 0
 		debug_contact = 0
 	end
-	
+	at_overflow = 0
 	if (debug_scooping >0) then
 		-- Fill water with 200 litres per second
 		add_water = dr_FRP * 200
 		dr_watermass = dr_watermass + add_water
 		if (dr_watermass > 3000) then
 			dr_watermass = 3000
+			at_overflow = 1
+		else
+			
 		end
 		--dr_scoop_deploy_ratio = 1
 	end
-	
+	dr_custom0 = at_overflow
 	if (prev_navlight ~= dr_nav_lights_on) then
 		simCMD_jettison_payload:once()
 		prev_navlight = dr_nav_lights_on
@@ -120,12 +142,12 @@ end
 
 function waterRudder()
 	sim_heartbeat = 3031
-	if (dr_airspeed_kts_pilot < 30) then
+	if (dr_airspeed_kts_pilot < 110) then
 		sim_heartbeat = 3032
-		--dr_water_rudder = 1
+		dr_water_rudder = 1
 	else
 		sim_heartbeat = 3033
-		--dr_water_rudder = 0
+		dr_water_rudder = 0
 	end
 	sim_heartbeat = 3034
 end
