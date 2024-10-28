@@ -11,6 +11,7 @@ dr_payload =  find_dataref("sim/flightmodel/weight/m_fixed")
 dr_watermass =  find_dataref("sim/flightmodel/weight/m_jettison")
 dr_speedbrake_ratio = find_dataref("sim/cockpit2/controls/speedbrake_ratio")
 
+dr_gear = find_dataref("sim/cockpit/switches/gear_handle_status") 
 dr_onground =  find_dataref("sim/flightmodel/failures/onground_any")
 
 dr_firebutton =  find_dataref("sim/joystick/fire_key_is_down")
@@ -22,6 +23,8 @@ debug_speed = create_dataref("AT/system/scoop/debug/speed", "number")
 debug_scoo = create_dataref("AT/system/scoop/debug/sc", "number")
 
 dr_airspeed_kts_pilot = find_dataref("sim/flightmodel/position/indicated_airspeed") 
+
+dr_groundspeed = find_dataref("sim/flightmodel/position/groundspeed") 
 dr_water_rudder = find_dataref("sim/cockpit2/controls/water_rudder_handle_ratio")
 dr_pitot = find_dataref("sim/cockpit/switches/pitot_heat_on")
 dr_nav_lights_on = find_dataref("sim/cockpit/electrical/nav_lights_on")
@@ -95,7 +98,7 @@ prev_navlight = 0
 prev_mix = 0
 function checkIfScooping()
 	debug_speed = interpolate(0, 40, 3000, 50, dr_watermass)
-	if (dr_onground > 0) then
+	if (dr_onground > 0 and dr_gear == 0) then
 		debug_contact = 1
 		if (dr_firebutton > 0 or dr_pitot > 0 or at_scoop_deploy > 0) then
 			if (dr_airspeed_kts_pilot > debug_speed) then
@@ -113,7 +116,9 @@ function checkIfScooping()
 	at_overflow = 0
 	if (debug_scooping >0) then
 		-- Fill water with 200 litres per second
-		add_water = dr_FRP * 200
+		if dr_groundspeed > 7.0 then -- måste komma över 7m/s för att den ska orka trycka upp vatten
+			add_water = dr_FRP * 6.7 * (dr_groundspeed-7.0)
+		end
 		dr_watermass = dr_watermass + add_water
 		if (dr_watermass > 3000) then
 			dr_watermass = 3000

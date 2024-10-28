@@ -145,10 +145,10 @@ P _gear/0/_latN 0.0
 P _gear/0/_latR 0.0
 P _gear/0/_leg_len 2.624671936
 P _gear/0/_lonE 14.0
-P _gear/0/_lonN 31.698040009
+P _gear/0/_lonN 47.530956268
 P _gear/0/_lonR 90.0
 P _gear/0/_scon 17751.736328125
-P _gear/0/_stat_def 0.265255183
+P _gear/0/_stat_def 0.265255064
 P _gear/0/_steerdeg_hispeed 10.0
 P _gear/0/_steerdeg_lospeed 20.0
 P _gear/0/_strut_comp 0.500000000
@@ -179,10 +179,10 @@ P _gear/1/_latN 0.0
 P _gear/1/_latR 0.0
 P _gear/1/_leg_len 2.624671936
 P _gear/1/_lonE 14.0
-P _gear/1/_lonN 31.698040009
+P _gear/1/_lonN 47.530956268
 P _gear/1/_lonR 90.0
 P _gear/1/_scon 17751.736328125
-P _gear/1/_stat_def 0.265255183
+P _gear/1/_stat_def 0.265255064
 P _gear/1/_steerdeg_hispeed 10.0
 P _gear/1/_steerdeg_lospeed 20.0
 P _gear/1/_strut_comp 0.500000000
@@ -213,10 +213,10 @@ P _gear/2/_latN 0.0
 P _gear/2/_latR 0.0
 P _gear/2/_leg_len 1.640419960
 P _gear/2/_lonE 0.0
-P _gear/2/_lonN -41.916412354
+P _gear/2/_lonN -79.415420532
 P _gear/2/_lonR -180.0
 P _gear/2/_scon 26204.947265625
-P _gear/2/_stat_def 0.588274240
+P _gear/2/_stat_def 0.588274121
 P _gear/2/_steerdeg_hispeed 0.0
 P _gear/2/_steerdeg_lospeed 0.0
 P _gear/2/_strut_comp 0.0
@@ -247,10 +247,10 @@ P _gear/3/_latN 0.0
 P _gear/3/_latR 0.0
 P _gear/3/_leg_len 1.640419960
 P _gear/3/_lonE 0.0
-P _gear/3/_lonN -41.916412354
+P _gear/3/_lonN -79.415420532
 P _gear/3/_lonR -180.0
 P _gear/3/_scon 26204.947265625
-P _gear/3/_stat_def 0.588274240
+P _gear/3/_stat_def 0.588274121
 P _gear/3/_steerdeg_hispeed 0.0
 P _gear/3/_steerdeg_lospeed 0.0
 P _gear/3/_strut_comp 0.0
@@ -39392,6 +39392,7 @@ P acf/_m_shift_dx 0.0
 P acf/_m_shift_dz 0.0
 P acf/_manual_rad_gyr 0
 P acf/_manual_reversion_rat 0.0
+P acf/_manufacturer Saab
 P acf/_mast_bump_cyclic_ailn 0.0
 P acf/_mast_bump_cyclic_roll 0.0
 P acf/_max_CHT 500.0
@@ -39423,7 +39424,7 @@ P acf/_mixt_x_ctr 88.0
 P acf/_n1_power_curve1 2.0
 P acf/_n1_power_curve2 3.0
 P acf/_n2_power_curve 3.500000000
-P acf/_name Fire Boss F11 obj
+P acf/_name Fire Boss F11 3D
 P acf/_new_plot_XP3D_cock/0 1
 P acf/_new_plot_XP3D_cock/1 1
 P acf/_new_plot_XP3D_cock/2 0
