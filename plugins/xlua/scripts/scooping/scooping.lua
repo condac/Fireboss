@@ -31,14 +31,18 @@ dr_nav_lights_on = find_dataref("sim/cockpit/electrical/nav_lights_on")
 
 dr_mix1 = find_dataref("sim/cockpit2/engine/actuators/mixture_ratio[1]")
 
-dr_draw_fire = find_dataref("sim/graphics/settings/draw_forestfires")
+--dr_draw_fire = find_dataref("sim/graphics/settings/draw_forestfires")
 
 dr_custom0 = find_dataref("sim/cockpit2/controls/speedbrake_ratio")
 
 simCMD_jettison_payload = find_command("sim/flight_controls/jettison_payload")
 
 at_scoop_deploy = create_dataref("AT/scoop", "number")
+at_dropping = create_dataref("AT/dropping", "number")
+
 at_scoop_deploy = 0
+at_dropping = 0
+
 function toggleScoop(phase, duration)
 	sim_heartbeat = 220
 	if debug_scoo == 0 then
@@ -156,13 +160,31 @@ function waterRudder()
 	end
 	sim_heartbeat = 3034
 end
+
+
+prev_waterlevel = 0
+function dropEffect()
+	if dr_watermass == prev_waterlevel then
+		at_dropping = 0
+	else
+		
+		if dr_watermass < prev_waterlevel then
+			at_dropping = prev_waterlevel - dr_watermass
+			prev_waterlevel = dr_watermass
+		else
+			prev_waterlevel = dr_watermass
+		end
+	end
+end
+
+
 heartbeat = 0
 function before_physics() 
 	sim_heartbeat = 300
 	checkIfScooping()
 	
 	sim_heartbeat = 301
-	dr_draw_fire = 1
+	--dr_draw_fire = 1
 	sim_heartbeat = 302
 	
 	dr_payload = 0
@@ -170,6 +192,8 @@ function before_physics()
 	sim_heartbeat = 303
 	waterRudder()
 	sim_heartbeat = 304
+	dropEffect()
+	sim_heartbeat = 305
 	
 	sim_heartbeat = heartbeat
 	heartbeat = heartbeat + 1
