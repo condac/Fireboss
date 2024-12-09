@@ -39,6 +39,7 @@ simCMD_jettison_payload = find_command("sim/flight_controls/jettison_payload")
 
 at_scoop_deploy = create_dataref("AT/scoop", "number")
 at_dropping = create_dataref("AT/dropping", "number")
+at_watercontact = create_dataref("AT/watercontact", "number")
 
 at_scoop_deploy = 0
 at_dropping = 0
@@ -102,8 +103,10 @@ prev_navlight = 0
 prev_mix = 0
 function checkIfScooping()
 	debug_speed = interpolate(0, 40, 3000, 50, dr_watermass)
+	at_watercontact = 0
 	if (dr_onground > 0 and dr_gear == 0) then
 		debug_contact = 1
+		at_watercontact = 1
 		if (dr_firebutton > 0 or dr_pitot > 0 or at_scoop_deploy > 0 or (dr_mix1 > 0.8)) then
 			if (dr_airspeed_kts_pilot > debug_speed) then
 				debug_scooping = 1
