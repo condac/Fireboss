@@ -405,7 +405,7 @@ EMITTER
 SUB_EMITTER
  PARTICLE_TYPE 1
 EMIT_RATE
-SLOT 7
+SLOT 8
 INTERP_MODE CUBIC_AVG
 	0.000000	0.000000	0.000000
 	1.000000	60.000000	60.000000
@@ -484,7 +484,7 @@ END_KEYFRAME_TABLE
  RANDOMIZE_ROLL 1
  THINNING 0.000000
 END_SUB_EMITTER
-DATAREFS 8
+DATAREFS 9
 DREF 
 DREF 
 DREF sim/cockpit2/switches/custom_slider_on[0]
@@ -493,6 +493,7 @@ DREF sim/cockpit2/switches/custom_slider_on[*]
 DREF sim/cockpit2/switches/custom_slider_on[1]
 DREF sim/flightmodel2/wing/speedbrake1_deg[0]
 DREF sim/cockpit2/controls/speedbrake_ratio
+DREF sim/flightmodel2/controls/speedbrake_ratio
 END_EMITTER
 EMITTER
  NAME Water_emitter
