@@ -104,7 +104,7 @@ function checkIfScooping()
 	debug_speed = interpolate(0, 40, 3000, 50, dr_watermass)
 	if (dr_onground > 0 and dr_gear == 0) then
 		debug_contact = 1
-		if (dr_firebutton > 0 or dr_pitot > 0 or at_scoop_deploy > 0) then
+		if (dr_firebutton > 0 or dr_pitot > 0 or at_scoop_deploy > 0 or (dr_mix1 > 0.8)) then
 			if (dr_airspeed_kts_pilot > debug_speed) then
 				debug_scooping = 1
 			else
@@ -138,7 +138,7 @@ function checkIfScooping()
 		prev_navlight = dr_nav_lights_on
 	end
 	
-	if (dr_mix1 < 0.4) then
+	if (dr_mix1 < 0.1) then
 		if (prev_mix == 0) then
 			prev_mix = 1
 			simCMD_jettison_payload:once()
