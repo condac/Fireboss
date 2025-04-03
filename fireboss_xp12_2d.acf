@@ -25992,7 +25992,6 @@ P acf/_ap_crs_src 0
 P acf/_apt_req_plane 0
 P acf/_asi_is_kts 1
 P acf/_author Bengt F11 Museum
-P acf/_auto_cowl_flaps_EQ 32765
 P acf/_auto_engage_BC_deg 0.000000000
 P acf/_auto_omega_fire 2.000000000
 P acf/_auto_omega_idle 0.000000000
@@ -27444,7 +27443,7 @@ P acf/_feathered_pitch 74.300003052
 P acf/_ff_rat_idle_JET 0.100000001
 P acf/_ff_rat_idle_PRP 0.100000001
 P acf/_ff_rat_idle_turbo 0.100000001
-P acf/_file_writer_version 121212
+P acf/_file_writer_version 121407
 P acf/_fixed_max/0 0.000000000
 P acf/_fixed_max/1 0.000000000
 P acf/_fixed_max/2 0.000000000
@@ -27624,10 +27623,10 @@ P acf/_fuel_sel_cmnd_valid_pos_rgt/5 -1
 P acf/_fuel_sel_cmnd_valid_pos_rgt/count 6
 P acf/_g1000_keyboard_EQ -1
 P acf/_gear_EQ 1
-P acf/_gear_can_ret_on_ground 1
 P acf/_gear_exposed_when_retracted 0.000000000
 P acf/_gear_extend_protect 0
 P acf/_gear_pumps 25.000000000
+P acf/_gear_retract_protect 0
 P acf/_gear_warn_above_flap_rat 0.000000000
 P acf/_gear_warn_below_kias 0.000000000
 P acf/_gear_warn_below_thro_pct 0.000000000
@@ -27938,7 +27937,7 @@ P acf/_min_n2_EGT 49.000000000
 P acf/_min_n2_ITT 49.000000000
 P acf/_min_rwy_len 0.000000000
 P acf/_min_vec_on_ground 0.000000000
-P acf/_mixt_x_ctr 88.000000000
+P acf/_mixt_x_ctr 148.500000000
 P acf/_n1_power_curve1 2.000000000
 P acf/_n1_power_curve2 3.000000000
 P acf/_n1_rated_thrust 100.000000000
@@ -28017,7 +28016,7 @@ P acf/_prim_is_epr 0
 P acf/_prop_inlet_recovery_v12 0.500000000
 P acf/_prop_pitch_deg_per_sec 30.000000000
 P acf/_prop_pitch_deg_per_sec_unfeather 10.000000000
-P acf/_prop_x_ctr 117.000000000
+P acf/_prop_x_ctr 272.500000000
 P acf/_ptch_acft_dn_trim_rat 0.250000000
 P acf/_ptch_acft_trim_mode 0
 P acf/_ptch_acft_up_trim_rat 0.400000006
@@ -28472,7 +28471,7 @@ P acf/_tank_xyz_full/i_count 9
 P acf/_tank_xyz_full/j_count 3
 P acf/_the_eqlbm -0.211537033
 P acf/_thro_non_vect_props_at_sin_vect 0
-P acf/_thro_x_ctr 145.500000000
+P acf/_thro_x_ctr 257.000000000
 P acf/_throt_max_fwd_emr 1.009999990
 P acf/_throt_max_fwd_nrm 1.009999990
 P acf/_throt_max_rev 0.550000012
@@ -28668,7 +28667,7 @@ P acf/_yel_lo_xmsn_T 0
 PROPERTIES_END
 PANEL_2D_BEGIN
 ins_timer_BC ins_timer_BC
-  POS 105.000000 223.500000
+  POS -57.000000 247.500000
   DATAREF 
   SIZE 2.000000
   LIGHT_MODE MECHANICAL
@@ -28676,7 +28675,7 @@ ins_timer_BC ins_timer_BC
   BUS_SRC 1
 
 alt_BC_dig alt_BC_dig.png
-  POS 974.000000 560.000000
+  POS 974.000000 550.000000
   DATAREF 
   SIZE 2.000000
   LIGHT_MODE BACK_LIT_MANUAL
@@ -28714,7 +28713,7 @@ elv_trim_ind elv_trim_ind
   BUS_SRC 1
 
 han_mixture_lin han_mixture_lin
-  POS 88.000000 -113.000000
+  POS 10.000000 -35.000000
   DATAREF 
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
@@ -28791,14 +28790,14 @@ ann_chip_detect ann_chip_detect
   BUS_SRC 1
 
 han_thrott_lin han_thrott_lin
-  POS 145.500000 -113.000000
+  POS 242.500000 -100.000000
   DATAREF 
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
   BUS_SRC 1
 
 han_prop_lin han_prop_lin
-  POS 117.000000 -113.000000
+  POS 271.000000 65.000000
   DATAREF 
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
@@ -28868,7 +28867,7 @@ but_bea_light but_bea_light
   BUS_SRC 1
 
 baro_pressure_dig baro_pressure_dig
-  POS 103.000000 277.000000
+  POS 151.000000 342.000000
   DATAREF 
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
@@ -28948,9 +28947,9 @@ ott_stec55 S-TEC_55.png
   KEY_FRAME 1.000000 1.000000
 
 ins_stormscope stormscope.png
-  POS 103.000000 77.000000
+  POS 135.000000 19.000000
   DATAREF 
-  SIZE 1.300000
+  SIZE 1.600000
   LIGHT_MODE BACK_LIT_MANUAL
   LIGHT_RHEOSTAT 0
   KEY_FRAME 0.000000 0.000000 1.000000
@@ -29000,7 +28999,7 @@ but_generator but_generator.png
   KEY_FRAME 1.000000 1.000000
 
 horiz_gls_BC horizon_Glass_BC.pn
-  POS 698.571411 570.714294
+  POS 698.571411 558.714294
   DATAREF 
   SIZE 2.000000
   LIGHT_MODE MECHANICAL
@@ -29009,7 +29008,7 @@ horiz_gls_BC horizon_Glass_BC.pn
   KEY_FRAME 1.000000 1.000000
 
 asi_adap_GA_nodig asi_adap_GA.png
-  POS 434.000000 570.000000
+  POS 434.000000 543.000000
   DATAREF 
   SIZE 2.000000
   LIGHT_MODE MECHANICAL
@@ -29032,7 +29031,7 @@ ins_stall ins_stall
   BUS_SRC 1
 
 but_starter_GA but_starter_GA
-  POS 35.000000 -100.000000
+  POS 27.000000 -101.000000
   DATAREF 
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
@@ -29046,7 +29045,7 @@ han_elv_trim_act han_elv_trim_act
   BUS_SRC 1
 
 han_mixture_lin han_mixture_lin
-  POS 88.000000 -113.000000
+  POS 287.000000 12.000000
   DATAREF 
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
@@ -29116,14 +29115,14 @@ ann_chip_detect ann_chip_detect
   BUS_SRC 1
 
 han_thrott_lin han_thrott_lin
-  POS 145.500000 -113.000000
+  POS 271.500000 -96.000000
   DATAREF 
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
   BUS_SRC 1
 
 han_prop_lin han_prop_lin
-  POS 117.000000 -113.000000
+  POS 274.000000 -17.000000
   DATAREF 
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
@@ -29208,7 +29207,7 @@ but_bea_light but_bea_light
   BUS_SRC 1
 
 ins_tailnum ins_tailnum
-  POS 99.000000 299.000000
+  POS 151.000000 369.000000
   DATAREF 
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
@@ -29267,17 +29266,8 @@ ins_ice_pitot_heat ins_ice_pitot_heat
   LIGHT_RHEOSTAT 0
   BUS_SRC 1
 
-eng_all_MP multi_MP.png
-  POS 1289.000000 629.000000
-  DATAREF 
-  SIZE 2.500000
-  LIGHT_MODE BACK_LIT_MANUAL
-  LIGHT_RHEOSTAT 0
-  KEY_FRAME 0.000000 0.000000 1.000000
-  KEY_FRAME 1.000000 1.000000
-
 ins_turn turn.png
-  POS 434.000000 287.000000
+  POS 434.000000 280.000000
   DATAREF 
   SIZE 2.000000
   LIGHT_MODE BACK_LIT_MANUAL
@@ -29285,17 +29275,8 @@ ins_turn turn.png
   KEY_FRAME 0.000000 0.000000 1.000000
   KEY_FRAME 1.000000 1.000000
 
-eng_all_FF multi_FF.png
-  POS 1784.000000 629.000000
-  DATAREF 
-  SIZE 2.500000
-  LIGHT_MODE BACK_LIT_MANUAL
-  LIGHT_RHEOSTAT 0
-  KEY_FRAME 0.000000 0.000000 1.000000
-  KEY_FRAME 1.000000 1.000000
-
 ins_HSI_1_HM HSI_1_HM.png
-  POS 699.000000 288.000000
+  POS 699.000000 271.000000
   DATAREF 
   SIZE 1.750000
   LIGHT_MODE BACK_LIT_MANUAL
@@ -29313,9 +29294,9 @@ flap_ind_rnd indicate_flap_round
   KEY_FRAME 1.000000 1.000000
 
 ins_VOR2_OBS VOR_2_OBS.png
-  POS 704.000000 41.000000
+  POS 702.000000 23.000000
   DATAREF 
-  SIZE 1.800000
+  SIZE 1.700000
   LIGHT_MODE BACK_LIT_MANUAL
   LIGHT_RHEOSTAT 0
   KEY_FRAME 0.000000 0.000000 1.000000
@@ -29367,25 +29348,25 @@ rad_GPS_530_2d Garmin_530_2d.png
   KEY_FRAME 1.000000 1.000000
 
 ins_ADF_conven1_GA ADF_conven1_GA.png
-  POS 973.000000 50.000000
+  POS 975.000000 27.000000
   DATAREF 
-  SIZE 1.900000
+  SIZE 1.700000
   LIGHT_MODE BACK_LIT_MANUAL
   LIGHT_RHEOSTAT 0
   KEY_FRAME 0.000000 0.000000 1.000000
   KEY_FRAME 1.000000 1.000000
 
 elv_trim_ind_rnd elv_trim_ind_rnd.pn
-  POS 151.500000 556.500000
+  POS 135.500000 542.500000
   DATAREF 
-  SIZE 3.500000
+  SIZE 4.000000
   LIGHT_MODE BACK_LIT_MANUAL
   LIGHT_RHEOSTAT 0
   KEY_FRAME 0.000000 0.000000 1.000000
   KEY_FRAME 1.000000 1.000000
 
 eng_all_PRP multi_RPM_prop.png
-  POS 1516.000000 629.000000
+  POS 1533.000000 638.000000
   DATAREF 
   SIZE 2.500000
   LIGHT_MODE MECHANICAL
@@ -29401,15 +29382,6 @@ rhe_ins_brt_HM rhe_instrument_brt_
   KEY_FRAME 0.000000 0.000000 1.000000
   KEY_FRAME 1.000000 1.000000
 
-eng_all_EGT multi_EGT.png
-  POS 2056.000000 629.000000
-  DATAREF 
-  SIZE 2.500000
-  LIGHT_MODE BACK_LIT_MANUAL
-  LIGHT_RHEOSTAT 0
-  KEY_FRAME 0.000000 0.000000 1.000000
-  KEY_FRAME 1.000000 1.000000
-
 rhe_pan_brt_HM rhe_flood_brt_HM.pn
   POS 1317.000000 43.000000
   DATAREF 
@@ -29419,9 +29391,9 @@ rhe_pan_brt_HM rhe_flood_brt_HM.pn
   KEY_FRAME 1.000000 1.000000
 
 ALL_fuel_round_GA fuel_round_all_GA.p
-  POS 2055.000000 369.000000
+  POS 2055.000000 384.000000
   DATAREF 
-  SIZE 3.000000
+  SIZE 4.000000
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
   KEY_FRAME 0.000000 0.000000 1.000000
@@ -29437,7 +29409,7 @@ vvi2k_GA VVI_2000_GA.png
   KEY_FRAME 1.000000 1.000000
 
 gen_tape vatten.png 2
-  POS 1183.000000 268.000000
+  POS 1183.500000 268.000000
   IMAGE gen_tape
   DATAREF sim/flightmodel/weight/m_jettison
   SIZE 2.000000
@@ -29451,6 +29423,51 @@ gear_light_one_HM but_gear_light_HM.p
   POS 1119.500000 -53.000000
   DATAREF 
   SIZE 2.500000
+  LIGHT_MODE MECHANICAL
+  LIGHT_RHEOSTAT 0
+  KEY_FRAME 0.000000 0.000000 1.000000
+  KEY_FRAME 1.000000 1.000000
+
+eng_rnd_ITT engine_ITT.png
+  POS 2055.000000 638.000000
+  DATAREF 
+  SIZE 2.500000
+  LIGHT_MODE MECHANICAL
+  LIGHT_RHEOSTAT 0
+  KEY_FRAME 0.000000 0.000000 1.000000
+  KEY_FRAME 1.000000 1.000000
+
+eng_rnd_TRQ engine_TRQ.png
+  POS 1788.000000 628.000000
+  DATAREF 
+  SIZE 2.500000
+  LIGHT_MODE MECHANICAL
+  LIGHT_RHEOSTAT 0
+  KEY_FRAME 0.000000 0.000000 1.000000
+  KEY_FRAME 1.000000 1.000000
+
+eng_rnd_fuelP engine_fuelP.png
+  POS 1777.000000 375.000000
+  DATAREF 
+  SIZE 1.500000
+  LIGHT_MODE MECHANICAL
+  LIGHT_RHEOSTAT 0
+  KEY_FRAME 0.000000 0.000000 1.000000
+  KEY_FRAME 1.000000 1.000000
+
+eng_rnd_N1 engine_N1.png
+  POS 1281.000000 638.000000
+  DATAREF 
+  SIZE 2.500000
+  LIGHT_MODE MECHANICAL
+  LIGHT_RHEOSTAT 0
+  KEY_FRAME 0.000000 0.000000 1.000000
+  KEY_FRAME 1.000000 1.000000
+
+ins_clock_GA clock_GA.png
+  POS 135.500000 280.500000
+  DATAREF 
+  SIZE 1.500000
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
   KEY_FRAME 0.000000 0.000000 1.000000
