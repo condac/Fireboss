@@ -116,7 +116,10 @@ function checkIfScooping()
 		else
 			debug_scooping = 0
 		end
+		dr_payload = 0
+	
 	else
+		dr_payload = 1000	
 		debug_scooping = 0
 		debug_contact = 0
 	end
@@ -190,8 +193,7 @@ function before_physics()
 	--dr_draw_fire = 1
 	sim_heartbeat = 302
 	
-	dr_payload = 0
-	
+
 	sim_heartbeat = 303
 	waterRudder()
 	sim_heartbeat = 304
