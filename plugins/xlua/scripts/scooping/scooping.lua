@@ -99,7 +99,9 @@ function do_on_exit()
 end
 
 prev_navlight = 0
-
+prev_ballast = 0
+ballast = 1000
+ballastmin = 1000
 prev_mix = 0
 function checkIfScooping()
 	debug_speed = interpolate(0, 40, 3000, 50, dr_watermass)
@@ -116,10 +118,11 @@ function checkIfScooping()
 		else
 			debug_scooping = 0
 		end
-		dr_payload = 0
-	
+		prev_ballast = (prev_ballast*9 + ballastmin) / 10
+		dr_payload = prev_ballast
 	else
-		dr_payload = 1000	
+		prev_ballast = (prev_ballast*9 + ballast) / 10
+		dr_payload = prev_ballast	
 		debug_scooping = 0
 		debug_contact = 0
 	end
