@@ -17,10 +17,16 @@ dr_onground =  find_dataref("sim/flightmodel/failures/onground_any")
 dr_firebutton =  find_dataref("sim/joystick/fire_key_is_down")
 dr_scoop_deploy_ratio =  find_dataref("sim/flightmodel2/misc/water_scoop_deploy_ratio")
 
+dr_m_fuel_total = find_dataref("sim/flightmodel/weight/m_fuel_total") 
+dr_fuel_flow = find_dataref("sim/flightmodel/engine/ENGN_FF_") 
+
 debug_contact = create_dataref("AT/system/scoop/debug/contact", "number")
 debug_scooping = create_dataref("AT/system/scoop/debug/scooping", "number")
 debug_speed = create_dataref("AT/system/scoop/debug/speed", "number")
 debug_scoo = create_dataref("AT/system/scoop/debug/sc", "number")
+
+at_fuel_eta = create_dataref("AT/system/fuel/eta", "number")
+at_fuel_range = create_dataref("AT/system/fuel/range", "number")
 
 dr_airspeed_kts_pilot = find_dataref("sim/flightmodel/position/indicated_airspeed") 
 
@@ -35,11 +41,15 @@ dr_mix1 = find_dataref("sim/cockpit2/engine/actuators/mixture_ratio[1]")
 
 dr_custom0 = find_dataref("sim/cockpit2/controls/speedbrake_ratio")
 
+dr_easy =  find_dataref("sim/cockpit2/switches/custom_slider_on[1]")
+
 simCMD_jettison_payload = find_command("sim/flight_controls/jettison_payload")
 
 at_scoop_deploy = create_dataref("AT/scoop", "number")
 at_dropping = create_dataref("AT/dropping", "number")
 at_watercontact = create_dataref("AT/watercontact", "number")
+
+at_easy = create_dataref("AT/system/scoop/easy", "number")
 
 at_scoop_deploy = 0
 at_dropping = 0
@@ -83,6 +93,10 @@ function interpolate(x1, y1, x2, y2, value)
 	return y
 end
 
+function myfilter(currentValue, newValue, amp)
+	return ((currentValue*amp) + (newValue))/(amp+1)
+end
+
 function flight_start() 
 	sim_heartbeat = 200
 	dr_payload = 0
@@ -101,7 +115,7 @@ end
 prev_navlight = 0
 prev_ballast = 0
 ballast = 1000
-ballastmin = 1000
+ballastmin = 0
 prev_mix = 0
 function checkIfScooping()
 	debug_speed = interpolate(0, 20, 3000, 50, dr_watermass)
@@ -118,10 +132,13 @@ function checkIfScooping()
 		else
 			debug_scooping = 0
 		end
-		prev_ballast = (prev_ballast*9 + ballastmin) / 10
+		prev_ballast = prev_ballast-10
+		if (prev_ballast < ballastmin) then
+			prev_ballast = ballastmin
+		end
 		dr_payload = prev_ballast
 	else
-		prev_ballast = (prev_ballast*9 + ballast) / 10
+		prev_ballast = ballast
 		dr_payload = prev_ballast	
 		debug_scooping = 0
 		debug_contact = 0
@@ -156,6 +173,12 @@ function checkIfScooping()
 		prev_mix = 0
 		
 	end
+
+	if (dr_easy >0) then
+		ballastmin = 0
+	else
+		ballastmin = 1000
+	end
 end
 
 function waterRudder()
@@ -186,6 +209,23 @@ function dropEffect()
 	end
 end
 
+eta_prev = 0
+function fuelCalc()
+sim_heartbeat = 3050
+	total = 0.0
+	total = total + dr_m_fuel_total
+sim_heartbeat = 3052
+	if (dr_fuel_flow[0]>0) then
+
+		eta = total / dr_fuel_flow[0]
+		eta = myfilter(eta_prev,eta , 10)
+		eta_prev = eta
+		at_fuel_range = math.floor(dr_groundspeed * eta)
+		at_fuel_eta = math.floor(eta)
+	end
+	sim_heartbeat = 407
+
+end
 
 heartbeat = 0
 function before_physics() 
@@ -196,13 +236,14 @@ function before_physics()
 	--dr_draw_fire = 1
 	sim_heartbeat = 302
 	
-
+	
 	sim_heartbeat = 303
 	waterRudder()
 	sim_heartbeat = 304
 	dropEffect()
 	sim_heartbeat = 305
-	
+	fuelCalc()
+	sim_heartbeat = 306
 	sim_heartbeat = heartbeat
 	heartbeat = heartbeat + 1
 end
