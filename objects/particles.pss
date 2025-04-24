@@ -491,9 +491,9 @@ DREF sim/cockpit2/switches/custom_slider_on[0]
 DREF sim/cockpit2/switches/custom_slider_on
 DREF sim/cockpit2/switches/custom_slider_on[*]
 DREF sim/cockpit2/switches/custom_slider_on[1]
-DREF sim/flightmodel2/wing/speedbrake1_deg[0]
-DREF sim/cockpit2/controls/speedbrake_ratio
-DREF sim/flightmodel2/controls/speedbrake_ratio
+DREF sim/cockpit2/switches/custom_slider_on[2]
+DREF sim/cockpit2/switches/custom_slider_on[2]
+DREF sim/cockpit2/switches/custom_slider_on[2]
 END_EMITTER
 EMITTER
  NAME Water_emitter
@@ -587,8 +587,8 @@ DREF sim/cockpit2/switches/custom_slider_on[0]
 DREF sim/cockpit2/switches/custom_slider_on
 DREF sim/cockpit2/switches/custom_slider_on[*]
 DREF sim/cockpit2/switches/custom_slider_on[1]
-DREF sim/flightmodel2/wing/speedbrake1_deg[0]
-DREF sim/cockpit2/controls/speedbrake_ratio
+DREF sim/cockpit2/switches/custom_slider_on[2]
+DREF sim/cockpit2/switches/custom_slider_on[2]
 DREF AT/dropping
 END_EMITTER
 EMITTER
@@ -683,8 +683,8 @@ DREF sim/cockpit2/switches/custom_slider_on[0]
 DREF sim/cockpit2/switches/custom_slider_on
 DREF sim/cockpit2/switches/custom_slider_on[*]
 DREF sim/cockpit2/switches/custom_slider_on[1]
-DREF sim/flightmodel2/wing/speedbrake1_deg[0]
-DREF sim/cockpit2/controls/speedbrake_ratio
+DREF sim/cockpit2/switches/custom_slider_on[2]
+DREF sim/cockpit2/switches/custom_slider_on[2]
 DREF AT/dropping
 DREF AT/watercontact
 END_EMITTER

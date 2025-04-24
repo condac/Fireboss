@@ -39,7 +39,7 @@ dr_mix1 = find_dataref("sim/cockpit2/engine/actuators/mixture_ratio[1]")
 
 --dr_draw_fire = find_dataref("sim/graphics/settings/draw_forestfires")
 
-dr_custom0 = find_dataref("sim/cockpit2/controls/speedbrake_ratio")
+dr_custom0 = find_dataref("sim/cockpit2/switches/custom_slider_on[2]") --sim/cockpit2/controls/speedbrake_ratio
 
 dr_easy =  find_dataref("sim/cockpit2/switches/custom_slider_on[1]")
 
@@ -157,6 +157,9 @@ function checkIfScooping()
 			
 		end
 		--dr_scoop_deploy_ratio = 1
+		dr_speedbrake_ratio = 1
+	else
+		dr_speedbrake_ratio = 0
 	end
 	dr_custom0 = at_overflow
 	if (prev_navlight ~= dr_nav_lights_on) then
