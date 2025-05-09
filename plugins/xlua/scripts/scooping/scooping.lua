@@ -118,7 +118,7 @@ ballast = 1000
 ballastmin = 0
 prev_mix = 0
 function checkIfScooping()
-	debug_speed = interpolate(0, 20, 3000, 50, dr_watermass)
+	debug_speed = interpolate(0, 20, 3000, 40, dr_watermass)
 	at_watercontact = 0
 	if (dr_onground > 0 and dr_gear == 0) then
 		debug_contact = 1
