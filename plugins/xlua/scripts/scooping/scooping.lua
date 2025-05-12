@@ -146,8 +146,10 @@ function checkIfScooping()
 	at_overflow = 0
 	if (debug_scooping >0) then
 		-- Fill water with 200 litres per second
+		-- 8.8 = 320l/s 
+		-- 6.0 = 216l/s
 		if dr_groundspeed > 7.0 then -- måste komma över 7m/s för att den ska orka trycka upp vatten
-			add_water = dr_FRP * 8.8 * (dr_groundspeed)
+			add_water = dr_FRP * 6.0 * (dr_groundspeed)
 		end
 		dr_watermass = dr_watermass + add_water
 		if (dr_watermass > 3000) then
