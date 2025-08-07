@@ -26072,7 +26072,7 @@ P acf/_bouncer_spring_k/i_count 14
 P acf/_bouncer_spring_k/j_count 3
 P acf/_brake_co 0.899999976
 P acf/_brake_max_stopping_KTGS 80.000000000
-P acf/_brake_to_steer_power 3.000000000
+P acf/_brake_to_steer_power 0.000000000
 P acf/_burner_delay_sec 0.000000000
 P acf/_burner_inc 0.000000000
 P acf/_bus_apu_is_on 0
@@ -27306,7 +27306,7 @@ P acf/_feathered_pitch 83.099998474
 P acf/_ff_rat_idle_JET 0.100000001
 P acf/_ff_rat_idle_PRP 0.100000001
 P acf/_ff_rat_idle_turbo 0.100000001
-P acf/_file_writer_version 121407
+P acf/_file_writer_version 122015
 P acf/_fixed_max/0 1000.000000000
 P acf/_fixed_max/1 0.000000000
 P acf/_fixed_max/2 0.000000000
@@ -27631,6 +27631,7 @@ P acf/_hud_region_index 0
 P acf/_hud_tapes_track_vector 0
 P acf/_hyd_PTU_type 0
 P acf/_hyd_brakes 0
+P acf/_hyd_brakes_abs 1
 P acf/_hyd_ele_pump_0123/0 0
 P acf/_hyd_ele_pump_0123/1 0
 P acf/_hyd_ele_pump_0123/2 0
@@ -27665,6 +27666,8 @@ P acf/_hyd_max_p_ele 0.000000000
 P acf/_hyd_max_p_eng 0.000000000
 P acf/_hyd_max_p_rot 0.000000000
 P acf/_hyd_nw_steer 0
+P acf/_hyd_park_brake_toe 1
+P acf/_hyd_park_brake_trap 0
 P acf/_hyd_prop_brake 0
 P acf/_hyd_prop_pump_0123/0 0
 P acf/_hyd_prop_pump_0123/1 0
@@ -27809,6 +27812,7 @@ P acf/_n2_power_curve 3.500000000
 P acf/_name Fire Boss F11 2d panel piper
 P acf/_new_plot_XP3D_cock/0 0
 P acf/_new_plot_outer_acf/0 1
+P acf/_no_default_chocks 0
 P acf/_no_default_contact_fx 0
 P acf/_no_default_engine_fx 0
 P acf/_no_default_gear_fx 0
@@ -27831,7 +27835,7 @@ P acf/_num_generators 1
 P acf/_num_inverters 2
 P acf/_num_prop 1
 P acf/_num_xmsn 1
-P acf/_o2_bottle_liter 415
+P acf/_o2_bottle_liter 415.000000000
 P acf/_oilT_is_C 1
 P acf/_ott_asi_kts_off_for_full_def 20.000000000
 P acf/_ott_asi_sec_into_future 10.000000000
@@ -28548,7 +28552,7 @@ but_brakes but_brakes
   BUS_SRC 1
 
 but_starter_GA but_starter_GA
-  POS 414.000000 -4.000000
+  POS 371.000000 -33.000000
   DATAREF 
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
@@ -29025,6 +29029,27 @@ eng_dig_ITT engine_dig_ITT.png
   POS 2054.000000 639.000000
   DATAREF 
   SIZE 2.500000
+  LIGHT_MODE MECHANICAL
+  LIGHT_RHEOSTAT 0
+  KEY_FRAME 0.000000 0.000000 1.000000
+  KEY_FRAME 1.000000 1.000000
+
+gen_annun lampaskopa
+  POS 447.000000 64.500000
+  IMAGE skopa
+  DATAREF 
+  SHOW_LESS 0.500000 sim/cockpit/switches/pitot_heat_on[0]
+  SIZE 2.000000
+  LIGHT_MODE MECHANICAL
+  LIGHT_RHEOSTAT 0
+  KEY_FRAME 0.000000 0.000000 1.000000
+  KEY_FRAME 1.000000 1.000000
+
+gen_annun drop
+  POS 451.000000 0.000000
+  IMAGE drop
+  DATAREF 
+  SHOW_LESS 0.500000 AT/system/scoop/dropreadylight
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
   KEY_FRAME 0.000000 0.000000 1.000000

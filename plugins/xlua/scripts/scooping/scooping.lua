@@ -24,6 +24,7 @@ debug_contact = create_dataref("AT/system/scoop/debug/contact", "number")
 debug_scooping = create_dataref("AT/system/scoop/debug/scooping", "number")
 debug_speed = create_dataref("AT/system/scoop/debug/speed", "number")
 debug_scoo = create_dataref("AT/system/scoop/debug/sc", "number")
+debug_dropready = create_dataref("AT/system/scoop/debug/dropready", "number")
 
 at_fuel_eta = create_dataref("AT/system/fuel/eta", "number")
 at_fuel_range = create_dataref("AT/system/fuel/range", "number")
@@ -50,6 +51,7 @@ at_dropping = create_dataref("AT/dropping", "number")
 at_watercontact = create_dataref("AT/watercontact", "number")
 
 at_easy = create_dataref("AT/system/scoop/easy", "number")
+at_dropready_light = create_dataref("AT/system/scoop/dropreadylight", "number")
 
 at_scoop_deploy = 0
 at_dropping = 0
@@ -117,12 +119,16 @@ prev_ballast = 0
 ballast = 1000
 ballastmin = 0
 prev_mix = 0
+readytodrop = 0
 function checkIfScooping()
 	debug_speed = interpolate(0, 20, 3000, 40, dr_watermass)
 	at_watercontact = 0
+	readytodrop = readytodrop + dr_FRP
+	debug_dropready = readytodrop
 	if (dr_onground > 0 and dr_gear == 0) then
 		debug_contact = 1
 		at_watercontact = 1
+		readytodrop = 0
 		if (dr_firebutton > 0 or dr_pitot > 0 or at_scoop_deploy > 0 or (dr_mix1 > 0.8)) then
 			if (dr_airspeed_kts_pilot > debug_speed) then
 				debug_scooping = 1
@@ -168,8 +174,14 @@ function checkIfScooping()
 		simCMD_jettison_payload:once()
 		prev_navlight = dr_nav_lights_on
 	end
+
+	if (readytodrop > 10 and dr_watermass > 0) then
+		at_dropready_light = 1
+	else
+		at_dropready_light = 0
+	end
 	
-	if (dr_mix1 < 0.1) then
+	if (dr_mix1 < 0.1 or (dr_pitot > 0 and at_dropready_light > 0)) then
 		if (prev_mix == 0) then
 			prev_mix = 1
 			simCMD_jettison_payload:once()
@@ -184,6 +196,8 @@ function checkIfScooping()
 	else
 		ballastmin = 1000
 	end
+	
+	
 end
 
 function waterRudder()
