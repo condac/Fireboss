@@ -129,7 +129,7 @@ function checkIfScooping()
 		debug_contact = 1
 		at_watercontact = 1
 		readytodrop = 0
-		if (dr_firebutton > 0 or dr_pitot > 0 or at_scoop_deploy > 0 or (dr_mix1 > 0.8)) then
+		if (dr_firebutton > 0 or dr_pitot > 0 or at_scoop_deploy > 0 ) then
 			if (dr_airspeed_kts_pilot > debug_speed) then
 				debug_scooping = 1
 			else
@@ -191,7 +191,7 @@ function checkIfScooping()
 		
 	end
 
-	if (dr_easy >0) then
+	if (dr_easy <1) then
 		ballastmin = 0
 	else
 		ballastmin = 1000
