@@ -25348,7 +25348,7 @@ P acf/_Vy_kts 120.000000000
 P acf/_Vyse_kts 0.000000000
 P acf/_add_def_exceeds_base_def 0
 P acf/_additonal_gear_flatplate 0.000000000
-P acf/_ai_can_fly 0
+P acf/_ai_can_fly 1
 P acf/_ailn1_cratR 0.250000000
 P acf/_ailn1_cratT 0.250000000
 P acf/_ailn1_dn 25.000000000
@@ -26244,7 +26244,7 @@ P acf/_bus_gen_is_on/7 0
 P acf/_bus_gen_is_on/count 8
 P acf/_buses_always_tied 0
 P acf/_bypass_ratio 0.000000000
-P acf/_callsign SE-MHN
+P acf/_callsign SE-MHF
 P acf/_camera_fov_zoom 60.000000000
 P acf/_camera_offset_phi 0.000000000
 P acf/_camera_offset_psi 0.000000000
@@ -28386,7 +28386,7 @@ P acf/_tail_rot_with_v2_kts 0.000000000
 P acf/_tail_rotor_lf_trim_rat 0.000000000
 P acf/_tail_rotor_rt_trim_rat 0.000000000
 P acf/_tail_with_coll 0.000000000
-P acf/_tailnum SE-MHN
+P acf/_tailnum SE-MHF
 P acf/_tailrotor_EQ 0
 P acf/_takeoff_trim_11 0.000000000
 P acf/_tank_name/count 9
@@ -28550,7 +28550,7 @@ P acf/_vect_min_nace 0.000000000
 P acf/_vect_power_aft 1.000000000
 P acf/_vect_power_for 1.000000000
 P acf/_vect_rate 15.000000000
-P acf/_version v1.3
+P acf/_version v1.4
 P acf/_vnav_descend_auto_arm 0
 P acf/_vor_mode_has_dead_reckon 0
 P acf/_vvi_but_adjusts_pitch 0
