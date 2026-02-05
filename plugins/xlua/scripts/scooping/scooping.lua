@@ -2,8 +2,8 @@
 sim_heartbeat = create_dataref("AT/system/scoop/heartbeat", "number")
 sim_heartbeat = 100
 
-dr_fog = find_dataref("sim/private/controls/fog/fog_be_gone")
-dr_cloud_shadow = find_dataref("sim/private/controls/clouds/cloud_shadow_lighten_ratio")
+--dr_fog = find_dataref("sim/private/controls/fog/fog_be_gone")
+--dr_cloud_shadow = find_dataref("sim/private/controls/clouds/cloud_shadow_lighten_ratio")
 
 dr_FRP = find_dataref("sim/operation/misc/frame_rate_period")
 
@@ -25,7 +25,7 @@ debug_scooping = create_dataref("AT/system/scoop/debug/scooping", "number")
 debug_speed = create_dataref("AT/system/scoop/debug/speed", "number")
 debug_scoo = create_dataref("AT/system/scoop/debug/sc", "number")
 debug_dropready = create_dataref("AT/system/scoop/debug/dropready", "number")
-
+sim_heartbeat = 101
 at_fuel_eta = create_dataref("AT/system/fuel/eta", "number")
 at_fuel_range = create_dataref("AT/system/fuel/range", "number")
 
@@ -34,7 +34,7 @@ dr_airspeed_kts_pilot = find_dataref("sim/flightmodel/position/indicated_airspee
 dr_groundspeed = find_dataref("sim/flightmodel/position/groundspeed") 
 dr_water_rudder = find_dataref("sim/cockpit2/controls/water_rudder_handle_ratio")
 dr_pitot = find_dataref("sim/cockpit/switches/pitot_heat_on")
-dr_nav_lights_on = find_dataref("sim/cockpit/electrical/nav_lights_on")
+
 
 dr_mix1 = find_dataref("sim/cockpit2/engine/actuators/mixture_ratio[1]")
 
@@ -44,6 +44,17 @@ dr_custom0 = find_dataref("sim/cockpit2/switches/custom_slider_on[2]") --sim/coc
 
 dr_easy =  find_dataref("sim/cockpit2/switches/custom_slider_on[1]")
 
+sim_heartbeat = 102
+--Externa Lampor
+
+dr_beacon_lights_on = find_dataref("sim/cockpit/electrical/beacon_lights_on")
+dr_cockpit_lights_on = find_dataref("sim/cockpit/electrical/cockpit_lights_on")
+dr_landing_lights_on = find_dataref("sim/cockpit/electrical/landing_lights_on")
+dr_nav_lights_on = find_dataref("sim/cockpit/electrical/nav_lights_on")
+dr_strobe_lights_on = find_dataref("sim/cockpit/electrical/strobe_lights_on")
+dr_taxi_light_on = find_dataref("sim/cockpit/electrical/taxi_light_on")
+
+sim_heartbeat = 103
 simCMD_jettison_payload = find_command("sim/flight_controls/jettison_payload")
 
 at_scoop_deploy = create_dataref("AT/scoop", "number")
@@ -103,7 +114,8 @@ function flight_start()
 	sim_heartbeat = 200
 	dr_payload = 0
 	dr_watermass = 0
-	dr_fog = 0.1
+	--dr_fog = 0.1
+	belysning()
 end
 
 function aircraft_unload()
@@ -246,6 +258,17 @@ sim_heartbeat = 3052
 
 end
 
+function belysning()
+	
+		dr_beacon_lights_on = 1
+		dr_cockpit_lights_on = 1
+		dr_landing_lights_on = 1
+		dr_nav_lights_on = 1
+		dr_strobe_lights_on = 1
+		dr_taxi_light_on = 1
+	
+end
+
 heartbeat = 0
 function before_physics() 
 	sim_heartbeat = 300
@@ -263,6 +286,7 @@ function before_physics()
 	sim_heartbeat = 305
 	fuelCalc()
 	sim_heartbeat = 306
+
 	sim_heartbeat = heartbeat
 	heartbeat = heartbeat + 1
 end
