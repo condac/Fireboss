@@ -1,4 +1,18 @@
-print("Running init script")
+-- Wanna use STP with XLua?  Copy StackTracePlus.lua to be next to init.lua in the same folder
+-- https://github.com/ignacio/StackTracePlus
+
+-- Grab STP conditionally, do not squawk if it is missing.
+--if pcall(
+--	function()
+--		local STP_chunk = XLuaGetCode("../../StackTracePlus.lua")
+--		local STP = STP_chunk()
+--		debug.traceback = STP.stacktrace
+--	end)
+--then
+--	print("Using STP as debugger.")
+--end
+
+
 
 function dump(o)
    if type(o) == 'table' then
@@ -357,7 +371,8 @@ function namespace_write(table, key, value)
 	--print("Namespace write of "..key)
 	ftable = rawget(table,'functions')
 	vtable = rawget(table,'values')
-
+	rkeys = rawget(table,'raw_table_keys')
+	
 	func = ftable[key]
 	if func ~= nil then
 		func.__set(func,value)
@@ -365,7 +380,7 @@ function namespace_write(table, key, value)
 		if seems_like_prop(value) then
 			ftable[key] = value
 		else
-			if not seems_like_object(value) and type(value) == "table" and getmetatable(value) == nil then
+			if not seems_like_object(value) and type(value) == "table" and getmetatable(value) == nil and rkeys[key] == nil then
 				--print("Bare table wrap for "..key)
 				v = {
 					functions = {},
@@ -410,6 +425,7 @@ function create_namespace()
 	ret = { 
 		functions = {}, 
 		values = {},
+		raw_table_keys = {},
 		create_prop = function(self,name, func)
 			self.functions[name] = func
 		end,
@@ -426,18 +442,36 @@ end
 -- find same-dir scripts and does a setfenv to our NS
 function get_run_file_in_namespace(ns)
 	return function(fname)
-		full_path = XLuaGetPath()..fname
-		chunk = loadfile(full_path)
-		setfenv(chunk,ns)
-		chunk()
+		chunk = XLuaGetCode(fname)
+		if chunk == nil then
+			print("Error: unable to load the file '"..full_path.."' for dofile.")
+			print(debug.traceback())
+			print("")
+		else
+			setfenv(chunk,ns)
+			chunk()
+		end
+	end
+end
+
+-- Built in custom closure to build _real_ tables.
+function get_real_table_in_namespace(ns)
+	return function(key,real_table)
+		vtable = rawget(ns,'values')
+		vtable[key] = real_table
+	end
+end
+
+function get_raw_table_in_namespace(ns)
+	return function(key)
+		rkeys = rawget(ns,'raw_table_keys')
+		rkeys[key] = true
 	end
 end
 
 --------------------------------------------------------------------------------
 
 function run_module_in_namespace(fn)
-	print("Running module in namespace")
-
 	n = create_namespace()
 	all_timers = { }
 	
@@ -457,6 +491,8 @@ function run_module_in_namespace(fn)
 	n.run_after_time = run_after_time
 	n.run_at_interval = run_at_interval
 	n.dofile = get_run_file_in_namespace(n)
+	n.real_table = get_real_table_in_namespace(n) 
+	n.raw_table = get_raw_table_in_namespace(n)
 	
 	setfenv(fn,n)
 	fn()
@@ -469,6 +505,9 @@ end
 function do_callout(fname)
 	func=n[fname]
 	if func ~= nil then
+		if STP ~= nil then
+			STP.add_known_function(func, fname)
+		end
 		func()
 	end
 end
