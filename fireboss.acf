@@ -32,10 +32,10 @@ P _blad/0/_ailn2/8 0
 P _blad/0/_ailn2/9 0
 P _blad/0/_ailn2/count 10
 P _blad/0/_ailn2_hyd0123 0
-P _blad/0/_bot_s1 0.968131900
+P _blad/0/_bot_s1 0.964360356
 P _blad/0/_bot_s2 0.989011049
-P _blad/0/_bot_t1 0.369985133
-P _blad/0/_bot_t2 0.576523006
+P _blad/0/_bot_t1 0.587329209
+P _blad/0/_bot_t2 0.811667144
 P _blad/0/_c_off_for_RIB/0 0.000000007
 P _blad/0/_c_off_for_RIB/1 0.000000000
 P _blad/0/_c_off_for_RIB/10 0.000000000
@@ -1786,10 +1786,10 @@ P _blad/0/_spoi2_hyd0123 0
 P _blad/0/_sweep_design 0.000000000
 P _blad/0/_sweep_full_aft 0.000000000
 P _blad/0/_sweep_rotation_span_os 0.000000000
-P _blad/0/_top_s1 0.969230831
+P _blad/0/_top_s1 0.964360356
 P _blad/0/_top_s2 0.989011049
-P _blad/0/_top_t1 0.369985133
-P _blad/0/_top_t2 0.576523006
+P _blad/0/_top_t1 0.585771322
+P _blad/0/_top_t2 0.813225091
 P _blad/0/_var_dihed 0
 P _blad/0/_var_incid 0
 P _blad/0/_var_retract 0
@@ -7168,8 +7168,8 @@ P _slid/9/_slider_time 0.000000000
 P _slid/count 24
 P _strut_s1 0.000000000
 P _strut_s2 0.015625000
-P _strut_t1 0.128906250
-P _strut_t2 0.252929688
+P _strut_t1 0.453349620
+P _strut_t2 0.545265853
 P _wing/0/_Croot 6.988189220
 P _wing/0/_Ctip 6.988189220
 P _wing/0/_afl_file_1 fireboss_mainwing.afl
@@ -7199,10 +7199,10 @@ P _wing/0/_ailn2/8 0
 P _wing/0/_ailn2/9 0
 P _wing/0/_ailn2/count 10
 P _wing/0/_ailn2_hyd0123 0
-P _wing/0/_bot_s1 0.755999982
-P _wing/0/_bot_s2 1.000000000
-P _wing/0/_bot_t1 0.000000000
-P _wing/0/_bot_t2 0.384000003
+P _wing/0/_bot_s1 0.007692308
+P _wing/0/_bot_s2 0.207389325
+P _wing/0/_bot_t1 0.984594345
+P _wing/0/_bot_t2 0.569093585
 P _wing/0/_c_off_for_RIB/0 0.000000000
 P _wing/0/_c_off_for_RIB/1 0.000000000
 P _wing/0/_c_off_for_RIB/10 0.000000000
@@ -8846,7 +8846,7 @@ P _wing/0/_part_psi 0.000000000
 P _wing/0/_part_specs_eq 1
 P _wing/0/_part_specs_invis 0
 P _wing/0/_part_specs_rmod 1
-P _wing/0/_part_tex 0
+P _wing/0/_part_tex 1
 P _wing/0/_part_the 0.000000000
 P _wing/0/_part_x -2.296587944
 P _wing/0/_part_y -1.706036687
@@ -8953,10 +8953,10 @@ P _wing/0/_spoi2_hyd0123 0
 P _wing/0/_sweep_design 0.000000000
 P _wing/0/_sweep_full_aft 0.000000000
 P _wing/0/_sweep_rotation_span_os 0.000000000
-P _wing/0/_top_s1 0.755999982
-P _wing/0/_top_s2 1.000000000
-P _wing/0/_top_t1 0.000000000
-P _wing/0/_top_t2 0.384000003
+P _wing/0/_top_s1 0.218910947
+P _wing/0/_top_s2 0.425148100
+P _wing/0/_top_t1 0.984594345
+P _wing/0/_top_t2 0.569093585
 P _wing/0/_var_dihed 0
 P _wing/0/_var_incid 0
 P _wing/0/_var_retract 0
@@ -9002,10 +9002,10 @@ P _wing/1/_ailn2/8 0
 P _wing/1/_ailn2/9 0
 P _wing/1/_ailn2/count 10
 P _wing/1/_ailn2_hyd0123 0
-P _wing/1/_bot_s1 0.013000000
-P _wing/1/_bot_s2 0.105494514
-P _wing/1/_bot_t1 0.459138185
-P _wing/1/_bot_t2 0.237000003
+P _wing/1/_bot_s1 0.443582714
+P _wing/1/_bot_s2 0.645211220
+P _wing/1/_bot_t1 0.984594345
+P _wing/1/_bot_t2 0.569093585
 P _wing/1/_c_off_for_RIB/0 0.000000000
 P _wing/1/_c_off_for_RIB/1 0.000000000
 P _wing/1/_c_off_for_RIB/10 0.000000000
@@ -10649,7 +10649,7 @@ P _wing/1/_part_psi 0.000000000
 P _wing/1/_part_specs_eq 1
 P _wing/1/_part_specs_invis 0
 P _wing/1/_part_specs_rmod 1
-P _wing/1/_part_tex 0
+P _wing/1/_part_tex 1
 P _wing/1/_part_the 0.000000000
 P _wing/1/_part_x 2.296587944
 P _wing/1/_part_y -1.706036687
@@ -10756,10 +10756,10 @@ P _wing/1/_spoi2_hyd0123 0
 P _wing/1/_sweep_design 0.000000000
 P _wing/1/_sweep_full_aft 0.000000000
 P _wing/1/_sweep_rotation_span_os 0.000000000
-P _wing/1/_top_s1 0.360000014
-P _wing/1/_top_s2 0.458999991
-P _wing/1/_top_t1 0.490000010
-P _wing/1/_top_t2 0.238999993
+P _wing/1/_top_s1 0.660189331
+P _wing/1/_top_s2 0.860665679
+P _wing/1/_top_t1 0.984594345
+P _wing/1/_top_t2 0.569093585
 P _wing/1/_var_dihed 0
 P _wing/1/_var_incid 0
 P _wing/1/_var_retract 0
@@ -10805,10 +10805,10 @@ P _wing/10/_ailn2/8 0
 P _wing/10/_ailn2/9 0
 P _wing/10/_ailn2/count 10
 P _wing/10/_ailn2_hyd0123 0
-P _wing/10/_bot_s1 0.540659368
-P _wing/10/_bot_s2 0.712087929
-P _wing/10/_bot_t1 0.604754806
-P _wing/10/_bot_t2 0.787518561
+P _wing/10/_bot_s1 0.528842747
+P _wing/10/_bot_s2 0.990860105
+P _wing/10/_bot_t1 0.074779317
+P _wing/10/_bot_t2 0.562402785
 P _wing/10/_c_off_for_RIB/0 0.000000000
 P _wing/10/_c_off_for_RIB/1 0.000000000
 P _wing/10/_c_off_for_RIB/10 0.000000000
@@ -12559,10 +12559,10 @@ P _wing/10/_spoi2_hyd0123 0
 P _wing/10/_sweep_design 16.000000000
 P _wing/10/_sweep_full_aft 0.000000000
 P _wing/10/_sweep_rotation_span_os 0.000000000
-P _wing/10/_top_s1 0.537362635
-P _wing/10/_top_s2 0.716483533
-P _wing/10/_top_t1 0.815750360
-P _wing/10/_top_t2 0.989598811
+P _wing/10/_top_s1 0.041477866
+P _wing/10/_top_s2 0.489669234
+P _wing/10/_top_t1 0.073221415
+P _wing/10/_top_t2 0.560844898
 P _wing/10/_var_dihed 0
 P _wing/10/_var_incid 0
 P _wing/10/_var_retract 0
@@ -18017,10 +18017,10 @@ P _wing/14/_ailn2/8 0
 P _wing/14/_ailn2/9 0
 P _wing/14/_ailn2/count 10
 P _wing/14/_ailn2_hyd0123 0
-P _wing/14/_bot_s1 0.113186821
-P _wing/14/_bot_s2 0.164835170
-P _wing/14/_bot_t1 0.503714681
-P _wing/14/_bot_t2 0.560178280
+P _wing/14/_bot_s1 0.879120946
+P _wing/14/_bot_s2 0.990109921
+P _wing/14/_bot_t1 0.689450204
+P _wing/14/_bot_t2 0.407132238
 P _wing/14/_c_off_for_RIB/0 0.000000000
 P _wing/14/_c_off_for_RIB/1 0.000000000
 P _wing/14/_c_off_for_RIB/10 0.000000000
@@ -19664,7 +19664,7 @@ P _wing/14/_part_psi 0.000000000
 P _wing/14/_part_specs_eq 1
 P _wing/14/_part_specs_invis 0
 P _wing/14/_part_specs_rmod 1
-P _wing/14/_part_tex 0
+P _wing/14/_part_tex 1
 P _wing/14/_part_the 0.000000000
 P _wing/14/_part_x 0.000000000
 P _wing/14/_part_y 1.574803114
@@ -19771,10 +19771,10 @@ P _wing/14/_spoi2_hyd0123 0
 P _wing/14/_sweep_design 0.000000000
 P _wing/14/_sweep_full_aft 0.000000000
 P _wing/14/_sweep_rotation_span_os 0.000000000
-P _wing/14/_top_s1 0.132967040
-P _wing/14/_top_s2 0.168131873
-P _wing/14/_top_t1 0.500742912
-P _wing/14/_top_t2 0.548291206
+P _wing/14/_top_s1 0.878022015
+P _wing/14/_top_s2 0.990109921
+P _wing/14/_top_t1 0.992570579
+P _wing/14/_top_t2 0.704309046
 P _wing/14/_var_dihed 0
 P _wing/14/_var_incid 0
 P _wing/14/_var_retract 0
@@ -19820,10 +19820,10 @@ P _wing/15/_ailn2/8 0
 P _wing/15/_ailn2/9 0
 P _wing/15/_ailn2/count 10
 P _wing/15/_ailn2_hyd0123 0
-P _wing/15/_bot_s1 0.276923090
-P _wing/15/_bot_s2 0.346153855
-P _wing/15/_bot_t1 0.506686449
-P _wing/15/_bot_t2 0.555720627
+P _wing/15/_bot_s1 0.879120946
+P _wing/15/_bot_s2 0.989011049
+P _wing/15/_bot_t1 0.692421973
+P _wing/15/_bot_t2 0.407132238
 P _wing/15/_c_off_for_RIB/0 0.000000000
 P _wing/15/_c_off_for_RIB/1 0.000000000
 P _wing/15/_c_off_for_RIB/10 0.000000000
@@ -21467,7 +21467,7 @@ P _wing/15/_part_psi 0.000000000
 P _wing/15/_part_specs_eq 1
 P _wing/15/_part_specs_invis 0
 P _wing/15/_part_specs_rmod 1
-P _wing/15/_part_tex 0
+P _wing/15/_part_tex 1
 P _wing/15/_part_the 0.000000000
 P _wing/15/_part_x 0.000000000
 P _wing/15/_part_y 1.574803114
@@ -21574,10 +21574,10 @@ P _wing/15/_spoi2_hyd0123 0
 P _wing/15/_sweep_design 0.000000000
 P _wing/15/_sweep_full_aft 0.000000000
 P _wing/15/_sweep_rotation_span_os 0.000000000
-P _wing/15/_top_s1 0.298901111
-P _wing/15/_top_s2 0.340659350
-P _wing/15/_top_t1 0.500742912
-P _wing/15/_top_t2 0.549777091
+P _wing/15/_top_s1 0.876923144
+P _wing/15/_top_s2 0.989011049
+P _wing/15/_top_t1 0.995542347
+P _wing/15/_top_t2 0.704309046
 P _wing/15/_var_dihed 0
 P _wing/15/_var_incid 0
 P _wing/15/_var_retract 0
@@ -21623,10 +21623,10 @@ P _wing/2/_ailn2/8 0
 P _wing/2/_ailn2/9 0
 P _wing/2/_ailn2/count 10
 P _wing/2/_ailn2_hyd0123 0
-P _wing/2/_bot_s1 0.600000024
-P _wing/2/_bot_s2 1.000000000
-P _wing/2/_bot_t1 0.000000000
-P _wing/2/_bot_t2 0.300000012
+P _wing/2/_bot_s1 0.007692308
+P _wing/2/_bot_s2 0.207389325
+P _wing/2/_bot_t1 0.570192277
+P _wing/2/_bot_t2 0.186948299
 P _wing/2/_c_off_for_RIB/0 0.000000000
 P _wing/2/_c_off_for_RIB/1 0.000000000
 P _wing/2/_c_off_for_RIB/10 0.000000000
@@ -23270,7 +23270,7 @@ P _wing/2/_part_psi 0.000000000
 P _wing/2/_part_specs_eq 1
 P _wing/2/_part_specs_invis 0
 P _wing/2/_part_specs_rmod 1
-P _wing/2/_part_tex 0
+P _wing/2/_part_tex 1
 P _wing/2/_part_the 0.000000000
 P _wing/2/_part_x -16.305772781
 P _wing/2/_part_y -0.721784770
@@ -23377,10 +23377,10 @@ P _wing/2/_spoi2_hyd0123 0
 P _wing/2/_sweep_design 0.000000000
 P _wing/2/_sweep_full_aft 0.000000000
 P _wing/2/_sweep_rotation_span_os 0.000000000
-P _wing/2/_top_s1 0.600000024
-P _wing/2/_top_s2 1.000000000
-P _wing/2/_top_t1 0.000000000
-P _wing/2/_top_t2 0.200000003
+P _wing/2/_top_s1 0.218910947
+P _wing/2/_top_s2 0.425148100
+P _wing/2/_top_t1 0.570579469
+P _wing/2/_top_t2 0.186948299
 P _wing/2/_var_dihed 0
 P _wing/2/_var_incid 0
 P _wing/2/_var_retract 0
@@ -23426,10 +23426,10 @@ P _wing/3/_ailn2/8 0
 P _wing/3/_ailn2/9 0
 P _wing/3/_ailn2/count 10
 P _wing/3/_ailn2_hyd0123 0
-P _wing/3/_bot_s1 0.007692308
-P _wing/3/_bot_s2 0.108791217
-P _wing/3/_bot_t1 0.239227340
-P _wing/3/_bot_t2 0.008915304
+P _wing/3/_bot_s1 0.443582714
+P _wing/3/_bot_s2 0.645211220
+P _wing/3/_bot_t1 0.570192277
+P _wing/3/_bot_t2 0.186948299
 P _wing/3/_c_off_for_RIB/0 0.000000000
 P _wing/3/_c_off_for_RIB/1 0.000000000
 P _wing/3/_c_off_for_RIB/10 0.000000000
@@ -25073,7 +25073,7 @@ P _wing/3/_part_psi 0.000000000
 P _wing/3/_part_specs_eq 1
 P _wing/3/_part_specs_invis 0
 P _wing/3/_part_specs_rmod 1
-P _wing/3/_part_tex 0
+P _wing/3/_part_tex 1
 P _wing/3/_part_the 0.000000000
 P _wing/3/_part_x 16.305772781
 P _wing/3/_part_y -0.721784770
@@ -25180,10 +25180,10 @@ P _wing/3/_spoi2_hyd0123 0
 P _wing/3/_sweep_design 0.000000000
 P _wing/3/_sweep_full_aft 0.000000000
 P _wing/3/_sweep_rotation_span_os 0.000000000
-P _wing/3/_top_s1 0.359340668
-P _wing/3/_top_s2 0.459340692
-P _wing/3/_top_t1 0.239227340
-P _wing/3/_top_t2 0.011887073
+P _wing/3/_top_s1 0.660189331
+P _wing/3/_top_s2 0.860665679
+P _wing/3/_top_t1 0.570579469
+P _wing/3/_top_t2 0.186948299
 P _wing/3/_var_dihed 0
 P _wing/3/_var_incid 0
 P _wing/3/_var_retract 0
@@ -29229,6 +29229,23 @@ gen_annun drop
   LIGHT_RHEOSTAT 0
   KEY_FRAME 0.000000 0.000000 1.000000
   KEY_FRAME 1.000000 1.000000
+
+gen_rheostat knappsmoke
+  POS 1673.000000 49.000000
+  DATAREF sim/cockpit2/switches/custom_slider_on[3]
+  LIGHT_MODE MECHANICAL
+  LIGHT_RHEOSTAT 0
+  KEY_FRAME 0.000000 0.000000 1.000000
+  KEY_FRAME 1.000000 1.000000
+  CLICK_RADIUS 10.000000
+  CLICK_RADIUS_DY 0.000000
+  STEP1 1.000000
+  STEP2 1.000000
+  OFFSET 0.000000
+  CURSOR DEFAULT
+  CLICK_DX 0
+  CLICK_DY 0
+  WRAP 0
 
 PANEL_2D_END
 PANEL_3D_BEGIN
