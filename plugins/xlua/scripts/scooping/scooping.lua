@@ -41,7 +41,7 @@ dr_mix1 = find_dataref("sim/cockpit2/engine/actuators/mixture_ratio[1]")
 --dr_draw_fire = find_dataref("sim/graphics/settings/draw_forestfires")
 
 dr_custom0 = find_dataref("sim/cockpit2/switches/custom_slider_on[2]") --sim/cockpit2/controls/speedbrake_ratio
-
+dr_custom3 = find_dataref("sim/cockpit2/switches/custom_slider_on[3]")
 dr_easy =  find_dataref("sim/cockpit2/switches/custom_slider_on[1]")
 
 sim_heartbeat = 102
@@ -63,6 +63,8 @@ at_watercontact = create_dataref("AT/watercontact", "number")
 
 at_easy = create_dataref("AT/system/scoop/easy", "number")
 at_dropready_light = create_dataref("AT/system/scoop/dropreadylight", "number")
+
+at_smoke = create_dataref("AT/smoke", "number")
 
 at_scoop_deploy = 0
 at_dropping = 0
@@ -276,6 +278,7 @@ function before_physics()
 	
 	sim_heartbeat = 301
 	--dr_draw_fire = 1
+	at_smoke = dr_custom3
 	sim_heartbeat = 302
 	
 	
